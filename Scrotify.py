@@ -193,7 +193,6 @@ for URLS in URL:
             f['artwork'] = img_in.read()
         f.save()
         i += 1
-
     print("\n")
 
 

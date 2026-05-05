@@ -39,8 +39,8 @@ f['title'] = track_name
 f['album'] = 'ENTER ALBUM NAME'
 f['albumartist'] = 'ENTER ALBUM ARTIST'
 f['artist'] = 'ENTER ARTIST ON THE TRACK'
-f['totaltracks'] = 1 # IMPORTANT ENTER THE NUMBER OF SONG IN THE ALBUM
-f['tracknumber'] = 1 # IMPORTANT ENTER THE NUMBER THAT THE TRACK HAS IN THE ALBUM
+f['totaltracks'] = 1 # IMPORTANT ENTER THE NUMBER OF SONG IN THE ALBUM.
+f['tracknumber'] = 1 # IMPORTANT ENTER THE NUMBER THAT THE TRACK HAS IN THE ALBUM.
 cover_path = '_cover\\RECOVER THE ID FROM _cover FOLDER.jpg'
 with open(cover_path, 'rb') as img_in:
     f['artwork'] = img_in.read()
