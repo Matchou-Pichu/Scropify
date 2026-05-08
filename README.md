@@ -12,7 +12,7 @@ The main app is called Scropify and contains everything. First, copy as many alb
     'https://open.spotify.com/album/0eHXynBGM4KPnl8Mmv2xOY?si=-l8SGkVxSz6sRs6-pK6PJA'
     ]
 ```
-It should have the 'https://open.spotify.com/album/' beginning in the urls. Make sure you paste it as a char, so that links can be used. Then you just need to run the code and voila.
+It should have the 'https://open.spotify.com/album/' beginning in the urls. Make sure you paste it as a char, so that links can be used. Then you just need to run the code and voila. (Careful with the number, it can be difficult to see what album download crashed sometimes so maybe put a chunk of 5 to 10 links to be safe).
 
 #### ⚠ WARNING ⚠
 
