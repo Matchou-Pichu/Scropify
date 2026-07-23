@@ -54,7 +54,6 @@ proxy = {
 # Initiate SpotifyClient for data
 
 URL = [ # PASTE SPOTIFY ALBUM LINKS, NO LIMIT
-    'https://open.spotify.com/album/0eHXynBGM4KPnl8Mmv2xOY?si=-l8SGkVxSz6sRs6-pK6PJA'
     ]
 
 for URLS in URL:
@@ -147,7 +146,7 @@ for URLS in URL:
     for k in ytUrls:
         print(k)
 
-    # Download your freaking music, the last step to become independant dude
+    # Downloads your freaking music, the last step to become independant dude
 
     i = 0
     for yt_urls in ytUrls:
