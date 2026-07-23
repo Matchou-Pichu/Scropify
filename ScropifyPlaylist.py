@@ -28,12 +28,11 @@ def get_tracks(plstTr):
     return artist, TrName
 
 URL = [ # PASTE SPOTIFY ALBUM LINKS, NO LIMIT
-    'https://open.spotify.com/playlist/6ReU9gwyYAdSxRlVQ80Hki?si=8bbnT3snS7OKaQ_fYK7c-w'
     ]
 
 client = sc.SpotifyClient()
 
-playlist = client.get_playlist_info('https://open.spotify.com/playlist/6ReU9gwyYAdSxRlVQ80Hki?si=8bbnT3snS7OKaQ_fYK7c-w')
+playlist = client.get_playlist_info('https://open.spotify.com/playlist/7qKWMsrOaYkMJGWikN9aqK?si=kA27h-JESp2vX236aiwkXA')
 playlist_list = [1]
 nbTrack = len(playlist['tracks'])
 playlistName = playlist['name']
@@ -119,8 +118,11 @@ for yt_urls in ytUrls:
                 }],
     }
 
-    with YoutubeDL(ydl_opts) as ydl:
-        ydl.download([url])
+    try:
+        with YoutubeDL(ydl_opts) as ydl:
+            ydl.download([url])
+    except:
+        continue
 
     pathfile = PATH[0] + '\\' + track_name + '.m4a'
     print("Checking file: ", pathfile)
