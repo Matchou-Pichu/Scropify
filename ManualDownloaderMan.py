@@ -22,6 +22,8 @@ print('HOW MANY SONGS ARE IN THE ALBUM ? ')
 totalTrack = input()
 print('WHAT IS THE NUMBER OF THE TRACK YOU WANT TO DOWNLOAD ? ')
 trackNum = input()
+print('ENTER COVER ID (enter only the name, not the .jpg extension) IF NO ID, ENTER 0')
+CoverID = input()
 
 track_name = safe_filename(title)  
 
@@ -55,7 +57,8 @@ f['albumartist'] = albumArtist
 f['artist'] = artists
 f['totaltracks'] = totalTrack # IMPORTANT ENTER THE NUMBER OF SONG IN THE ALBUM.
 f['tracknumber'] = trackNum # IMPORTANT ENTER THE NUMBER THAT THE TRACK HAS IN THE ALBUM.
-cover_path = '_cover\\RECOVER THE ID FROM _cover FOLDER.jpg'
-with open(cover_path, 'rb') as img_in:
-    f['artwork'] = img_in.read()
+if CoverID != '0':
+    cover_path = '_cover\\'+ CoverID + '.jpg'
+    with open(cover_path, 'rb') as img_in:
+        f['artwork'] = img_in.read()
 f.save()
