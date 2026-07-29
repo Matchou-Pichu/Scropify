@@ -179,9 +179,11 @@ def scroptify(u, progBar: QtWidgets.QProgressBar):
                             'preferredquality': '192',
                         }],
             }
-
-            with YoutubeDL(ydl_opts) as ydl:
-                ydl.download([url])
+            try:
+                with YoutubeDL(ydl_opts) as ydl:
+                    ydl.download([url])
+            except:
+                continue
 
             pathfile = PATH[0] + '\\' + track_name + '.m4a'
             print("Checking file:", pathfile)
