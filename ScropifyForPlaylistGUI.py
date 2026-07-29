@@ -1,14 +1,14 @@
 import sys
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6 import uic
-import ScropifyForAlbum
+import ScropifyPlaylist
 
 
 class MainWindow(QtWidgets.QMainWindow):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        uic.loadUi("dialog.ui", self)
+        uic.loadUi("dialogPlaylist.ui", self)
         self.DownloadButton.clicked.connect(self.pushButton)
         self.progressBar.setValue(0)
 
@@ -25,7 +25,7 @@ class MainWindow(QtWidgets.QMainWindow):
         return listLink
 
     def pushButton(self):
-        ScropifyForAlbum.scroptify(self.listableLinks(), self.progressBar)
+        ScropifyPlaylist.scroptify(self.listableLinks(), self.progressBar)
         self.progressBar.setValue(100)
 
 

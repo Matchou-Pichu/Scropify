@@ -36,7 +36,7 @@
      </rect>
     </property>
     <property name="placeholderText">
-     <string>https://open.spotify.com/album/6ui644Q70Flydnd4s9Ymns?si=yXxYEmHiR32XufGZzSPE3Q, ect</string>
+     <string>https://open.spotify.com/playlist/6ui644Q70Flydnd4s9Ymns?si=yXxYEmHiR32XufGZzSPE3Q, ect</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -54,7 +54,7 @@
      </font>
     </property>
     <property name="text">
-     <string>Paste your saved albums from spotify in the following box</string>
+     <string>Paste your saved playlists from spotify in the following box</string>
     </property>
    </widget>
    <widget class="QPushButton" name="DownloadButton">
@@ -86,7 +86,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Instructions : Put only  https://open.spotify.com/album/ links, no spaces, seperated by comas. Don't
+     <string>Instructions : Put only  https://open.spotify.com/playlist/ links, no spaces, seperated by comas. Don't
 worry if the GUI stop responding, it's not optimized yet. If it crashes, the downloader stopped or raised 
 an error. Please do a manual downlad in that case</string>
     </property>
