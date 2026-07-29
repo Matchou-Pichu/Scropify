@@ -1,18 +1,46 @@
-# Scropify V1
+# Scropify V2
 
-This is a cool tool that I coded to get rid of music subscription-based plateform. The goal is to migrate to a local way of listening music by taking all your album that you have on spotify and downloading it more easely 
+This is a simple tool that I coded to slowly get music on the infamous subscription-based plateform Spotify. The goal is to migrate to a local way of listening music by taking all your album ad playlist that you have on spotify and downloading it more easely.
 
 ## Get started
 
-#### How to use Scropify ?
+#### How to install ?
 
-The main app is called Scropify and contains everything. First, copy as many album link as you'd like to download. Then, paste them in urls : 
+For now, Scropify exists in a shell version, no executable version. You need to clone this project in order to use it. First of all, you need to install the latest version of Python that you can find on this page :
+
 ```http
-  URL = [ # PASTE SPOTIFY ALBUM LINKS, NO LIMIT
-    'https://open.spotify.com/album/0eHXynBGM4KPnl8Mmv2xOY?si=-l8SGkVxSz6sRs6-pK6PJA'
-    ]
+https://www.python.org/downloads/windows/
 ```
-It should have the 'https://open.spotify.com/album/' beginning in the urls. Make sure you paste it as a char, so that links can be used. Then you just need to run the code and voila. (Careful with the number, it can be difficult to see what album download crashed sometimes so maybe put a chunk of 5 to 10 links to be safe).
+
+After downloading and installing, search for Windows Powershell and check if it was correctly installed by searching for the version you installed (should return "Python 3.XX.X) :
+
+```http
+python --version
+```
+
+Congratulation, you installed python. Now, you need to install every librairy that the code needs to run. If you do not feel safe downloading those librairy, feel free to check every original git repo or website to check by yourself. Otherwise, install by copy/pasting the following code in WindowsPowershell:
+
+```http
+pip install spotifyscraper 
+pip install pytubefix
+pip install PyQt6
+pip install yt-dlp
+pip install music-tag
+```
+You are almost there ! Now that you downloaded each librairy, you need to download the project. To do so, go in the green section called code on top of the project and click Download Zip. De-compress the .zip fil and you are good to go ! Every time you want to use it, open your WindowsPowershell, and type these lines:
+
+#### For Albums
+```http
+cd path/to/the/folder/containing/all/the/files
+python ScropifyForAlbumGUI.py
+```
+#### For Playlist
+```http
+cd path/to/the/folder/containing/all/the/files
+python ScropifyForPlaylistGUI.py
+```
+An interface should appear. Now it's time for you to download your saved album and playlist ! Enjoy freedom :).
+
 
 #### ⚠ WARNING ⚠
 
