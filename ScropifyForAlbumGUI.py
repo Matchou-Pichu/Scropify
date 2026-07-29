@@ -1,7 +1,7 @@
 import sys
 from PyQt6 import QtCore, QtGui, QtWidgets
 from PyQt6 import uic
-import Scrotify
+import ScrotifyForAlbum
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -25,7 +25,7 @@ class MainWindow(QtWidgets.QMainWindow):
         return listLink
 
     def pushButton(self):
-        Scrotify.scroptify(self.listableLinks(), self.progressBar)
+        ScrotifyForAlbum.scroptify(self.listableLinks(), self.progressBar)
         self.progressBar.setValue(100)
 
 

@@ -8,8 +8,22 @@ from yt_dlp import YoutubeDL
 def safe_filename(name):
     return re.sub(r'[<>:"/\\|?*]', '', name)
 
-url = 'PASTE YOUTUBE URLS HERE BETWEEN APOSTROPHE'
-track_name = safe_filename('TITLE OF THE SONG')  # Use anti slash if it has non-latin character. Ex : 'It\'s okay'
+print('PASTE YOUTUBE URL HERE BETWEEN APOSTROPHE : ')
+url = input()
+print('TITLE OF THE SONG : ')
+title = input()
+print('ENTER ALBUM NAME : ')
+albumName = input()
+print('ENTER ARTIST ON THE TRACK : ')
+artists = input()
+print('ENTER ALBUM ARTIST')
+albumArtist = input()
+print('HOW MANY SONGS ARE IN THE ALBUM ? ')
+totalTrack = input()
+print('WHAT IS THE NUMBER OF THE TRACK YOU WANT TO DOWNLOAD ? ')
+trackNum = input()
+
+track_name = safe_filename(title)  
 
 output_template = os.path.join('_ManualDowloaderManFolder\\', track_name + ".%(ext)s")
 
@@ -36,11 +50,11 @@ print("Size:", os.path.getsize(pathfile) if os.path.exists(pathfile) else "N/A")
 # Metadata editing
 f = music_tag.load_file(pathfile)
 f['title'] = track_name
-f['album'] = 'ENTER ALBUM NAME'
-f['albumartist'] = 'ENTER ALBUM ARTIST'
-f['artist'] = 'ENTER ARTIST ON THE TRACK'
-f['totaltracks'] = 1 # IMPORTANT ENTER THE NUMBER OF SONG IN THE ALBUM.
-f['tracknumber'] = 1 # IMPORTANT ENTER THE NUMBER THAT THE TRACK HAS IN THE ALBUM.
+f['album'] = albumName
+f['albumartist'] = albumArtist
+f['artist'] = artists
+f['totaltracks'] = totalTrack # IMPORTANT ENTER THE NUMBER OF SONG IN THE ALBUM.
+f['tracknumber'] = trackNum # IMPORTANT ENTER THE NUMBER THAT THE TRACK HAS IN THE ALBUM.
 cover_path = '_cover\\RECOVER THE ID FROM _cover FOLDER.jpg'
 with open(cover_path, 'rb') as img_in:
     f['artwork'] = img_in.read()
